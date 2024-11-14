@@ -1,0 +1,53 @@
+/*
+Theme Name: MoreMag
+Theme URI:  https://afthemes.com/products/moremag/
+Author:     AF themes
+Author URI: https://afthemes.com/
+Description: The dynamic WordPress theme designed specifically for bloggers, magazine publishers, and news enthusiasts. Seamlessly navigate through our diverse selection of free demo sites to create your ideal news platform effortlessly. Elevate your customization game with our suite of over 9 custom widgets and widget sections, allowing you to curate and manage content with precision. Enhance reader engagement with customizable main banner options and the choice between light and dark modes for optimal readability. Seamlessly integrate e-commerce functionalities with RTL support and compatibility with popular plugins like Elementor, Gutenberg, and WooCommerce. MoreMag is engineered to amplify your site's search engine visibility, ensuring your content reaches a wider audience. Our dedicated support team is ready to assist you every step of the way. Explore all available demos and documentation on https://afthemes.com/products/moremag/, and unlock the full potential of your news website with MoreMag today.
+Template: morenews
+Version: 1.2.2
+Requires at least: 5.3
+WC requires at least: 3.0
+WC tested up to: 9.3
+Requires PHP: 7.0
+Tested up to: 6.7
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: moremag
+Tags: news, blog, entertainment, one-column, two-columns, grid-layout, block-styles, left-sidebar, right-sidebar, custom-header, flexible-header, custom-background, custom-menu, featured-images, full-width-template, post-formats, rtl-language-support, footer-widgets, translation-ready, theme-options, threaded-comments
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+MoreMag WordPress Theme, Copyright 2024 AF themes
+MoreMag is distributed under the terms of the GNU GPL v2 or later.
+*/
+.exclusive-posts .exclusive-now,
+div#main-navigation-bar {
+    background: #095437;
+}
+
+.main-navigation .menu-description {
+    background-color: #d72924;
+    
+}
+
+.main-navigation .menu-description:after{
+    border-top: 5px solid #d72924;
+}
+
+.af-cat-widget-carousel a.morenews-categories.category-color-1{
+    background-color: #0c794f;
+
+}
+
+a.morenews-categories.category-color-1{
+    color: #0c794f;
+}
+
+.mailchimp-block .block-title, 
+.morenews_posts_slider_widget .read-single .read-details .read-title h3, 
+article.latest-posts-full .read-title h3, 
+.af-banner-carousel .read-title h3{
+    font-size: 36px;
+}

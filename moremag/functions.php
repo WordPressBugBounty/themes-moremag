@@ -6,15 +6,27 @@ if (!function_exists('moremag_theme_enqueue_styles')) {
     function moremag_theme_enqueue_styles()
     {
         $min = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
-        $parent_style = 'morenews-style';        
+        $parent_style = 'morenews-style';   
+        $gmoremag_version = wp_get_theme()->get('Version');
+
         wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap' . $min . '.css');
-        wp_enqueue_style($parent_style, get_template_directory_uri() . '/style.css');
+        wp_enqueue_style($parent_style, get_template_directory_uri() . '/style' . $min . '.css', array(), $gmoremag_version);
         wp_enqueue_style(
             'moremag',
             get_stylesheet_directory_uri() . '/style.css',
             array('bootstrap', $parent_style),
             wp_get_theme()->get('Version')
         );
+
+        // Enqueue RTL Styles if the site is in RTL mode
+        if (is_rtl()) {
+            wp_enqueue_style(
+                'morenews-rtl',
+                get_template_directory_uri() . '/rtl.css',
+                array($parent_style),
+                $gmoremag_version
+            );
+        }
     }
 }
 
@@ -31,7 +43,8 @@ function moremag_filter_default_theme_options($defaults)
     $defaults['select_main_banner_layout_section'] = 'layout-5';
     $defaults['site_title_uppercase']  = 0;
     $defaults['flash_news_title']  = __('Breaking News', 'moremag');
-    $defaults['show_watch_online_section']  = 0;  
+    $defaults['show_watch_online_section']  = 0;     
+    $defaults['show_primary_menu_desc']  = 0;
     $defaults['global_show_min_read'] = 'no';
     $defaults['aft_custom_title']  = __('Subscribe', 'moremag');
     $defaults['main_latest_news_section_title']  = __("Editor's Picks", 'moremag');

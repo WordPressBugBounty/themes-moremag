@@ -45,7 +45,6 @@ function moremag_filter_default_theme_options($defaults)
     $defaults['flash_news_title']  = __('Breaking News', 'moremag');
     $defaults['show_watch_online_section']  = 0;     
     $defaults['show_primary_menu_desc']  = 0;
-    $defaults['global_show_min_read'] = 'no';
     $defaults['aft_custom_title']  = __('Subscribe', 'moremag');
     $defaults['main_latest_news_section_title']  = __("Editor's Picks", 'moremag');
     $defaults['main_popular_news_section_title']  = __('Trending Now', 'moremag');

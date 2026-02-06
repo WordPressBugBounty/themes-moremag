@@ -5,10 +5,10 @@ Author:     AF themes
 Author URI: https://afthemes.com/
 Description: MoreMag is a dynamic, magazine-focused WordPress child theme on MoreNews for bloggers, magazine publishers and news enthusiasts seeking editorial polish and merchandising options; it includes over 9 custom widgets and widget sections, customizable main banner options, header/footer builder support, light/dark reading modes, block patterns and WooCommerce compatibility for magazine shops or subscriptions, and works seamlessly with Gutenberg and Elementor; MoreMag is optimized for SEO, Core Web Vitals and speed, supports multilingual/RTL setups and provides a professional platform for building high-visibility magazine sites with strong monetization potential. https://afthemes.com/products/moremag/
 Template: morenews
-Version: 1.3.3
-Requires at least: 5.0
+Version: 1.3.19
+Requires at least: 4.0
 Requires PHP: 5.0
-Tested up to: 6.8
+Tested up to: 6.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: moremag
@@ -78,6 +78,11 @@ input[type="submit"] {
     border-color: #0c794f;
 }
 
+.aft-default-mode .entry-content .wp-block-heading:not(.has-link-color):not(.wp-block-post-title) a,
+.entry-content > p:not(.has-link-color) a, .entry-content > p:not(.has-link-color) a:visited{
+    color: #0c794f;
+}
+
 .gt_float_switcher .gt_options a {
     background-color: #fff !important;
     color: #444 !important;
@@ -87,4 +92,49 @@ input[type="submit"] {
     font-size: 15px;
     font-weight: 600;
     padding: 8px 10px;
+}
+
+.aft-dark-mode .post-page-numbers,
+.aft-dark-mode .morenews-pagination .nav-links .page-numbers{
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+span.post-page-numbers.current,
+.morenews-pagination .nav-links .page-numbers.current{
+    color: #fff;
+    background: #212121;
+}
+
+.post-page-numbers,
+.morenews-pagination .nav-links .page-numbers.current,
+.morenews-pagination .nav-links .page-numbers{
+    min-width: 30px;
+}
+
+.entry-content li ol:not([class*="wp-"]) ,
+.entry-content li ul:not([class*="wp-"]) {
+    padding-bottom: 0px;
+    padding-top: 5px;
+}
+
+input.search-field{
+    font-size: 16px;
+}
+
+.author-info {
+    font-size: inherit;
+}
+
+.entry-content li > ol, .entry-content li > ul, .comments-area li > ol, .comments-area li > ul {
+    margin: 5px 0 5px 20px !important;
+    padding-left: 0;
+}
+
+.entry-content li [class^="wp-block-"] {
+    margin-bottom: 5px;
+}
+
+.entry-content section.morenews-author-bio {
+    margin-top: 24px;
 }

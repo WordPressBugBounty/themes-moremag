@@ -5,7 +5,7 @@ Author:     AF themes
 Author URI: https://afthemes.com/
 Description: MoreMag is a dynamic, magazine-centric WordPress child theme on the MoreNews framework for bloggers and editorial publishers. It includes 9+ custom widgets, specialized widget sections, and customizable banner options with light/dark reading modes. The theme features a header and footer builder and is fully compatible with the Block Editor and Elementor for high-visibility site design. Optimized for speed and Core Web Vitals, it integrates with WooCommerce for digital subscriptions and shops. It is translation-ready with RTL support, providing a professional platform for modern magazines. https://afthemes.com/products/moremag/
 Template: morenews
-Version: 2.0.1
+Version: 2.0.2
 Requires at least: 4.0
 Requires PHP: 5.0
 Tested up to: 7.0
@@ -41,4 +41,8 @@ article.sticky .af-double-column.no-post-image .read-single > div.read-img::befo
     .af-banner-carousel .read-title h3{
         font-size: 36px;
     }
+}
+/* new block css */
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container>.wp-block-navigation-item>.wp-block-navigation-item__content {
+    color: inherit;
 }

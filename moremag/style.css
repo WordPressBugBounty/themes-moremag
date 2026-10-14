@@ -5,10 +5,10 @@ Author:     AF themes
 Author URI: https://afthemes.com/
 Description: MoreMag is a dynamic, magazine-centric WordPress child theme on the MoreNews framework for bloggers and editorial publishers. It includes 9+ custom widgets, specialized widget sections, and customizable banner options with light/dark reading modes. The theme features a header and footer builder and is fully compatible with the Block Editor and Elementor for high-visibility site design. Optimized for speed and Core Web Vitals, it integrates with WooCommerce for digital subscriptions and shops. It is translation-ready with RTL support, providing a professional platform for modern magazines. https://afthemes.com/products/moremag/
 Template: morenews
-Version: 2.1.4
+Version: 2.1.10
 Requires at least: 4.0
 Requires PHP: 5.0
-Tested up to: 7.0
+Tested up to: 7.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: moremag
@@ -78,12 +78,22 @@ article.sticky .af-double-column.no-post-image .read-single > div.read-img::befo
 .entry-content section.morenews-author-bio {
     margin-top: 24px;
 }
-
-.wp-block-comment-content a,
+.wp-block-latest-posts.wp-block-latest-posts__list li{margin-top:0;}
+.blockspare-list-wrap ul.wp-block-list {
+    list-style: none;
+}
+input.awpa-rating-button {
+    color: #fff !important;
+    border: 0 !important;
+}
+.wp-block-image figcaption {
+    text-align: start;
+}
+/* .wp-block-comment-content a,
 .comments-area .comment-content a,
 .widget_text a,
 .entry-content>[class*="wp-block-"] a:hover,
 .entry-content>:is(ul, ol, p) a:hover,
 .entry-content>:is(ul, ol, h1, h2, h3, h4, h5, h6, p) a {
     text-decoration: auto;
-}
+} */
